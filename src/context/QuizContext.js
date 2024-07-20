@@ -8,205 +8,469 @@ function Provider({ children }) {
   const questions = {
     A1: [
       {
-        id: 1,
-        question: "What does 'happy' mean?",
-        answers: [
-          { answer: "Üzgün", trueAnswer: false },
-          { answer: "Sinirli", trueAnswer: false },
-          { answer: "Mutlu", trueAnswer: true },
-          { answer: "Sıkıcı", trueAnswer: false },
-        ],
+        "id": 1,
+        "question": "Which of the following objects are accessible in the S/4HANA Cloud Extensibility Cockpit? (2 corrects)",
+        "answers": [
+          { "answer": "DLL objects", "trueAnswer": false },
+          { "answer": "CDS views", "trueAnswer": true },
+          { "answer": "Form templates", "trueAnswer": true },
+          { "answer": "Tables", "trueAnswer": false }
+        ]
       },
       {
-        id: 2,
-        question: "What does 'book' mean?",
-        answers: [
-          { answer: "Telefon", trueAnswer: false },
-          { answer: "Anahtar", trueAnswer: false },
-          { answer: "Kitap", trueAnswer: true },
-          { answer: "Kalem", trueAnswer: false },
-        ],
+        "id": 2,
+        "question": "In Cloud Foundry, which attribute of an application reflects its original development language? Choose the correct answer.",
+        "answers": [
+          { "answer": "The Requested State", "trueAnswer": false },
+          { "answer": "The Route", "trueAnswer": false },
+          { "answer": "The Buildpack.", "trueAnswer": true },
+          { "answer": "The Space.", "trueAnswer": false }
+        ]
       },
       {
-        id: 3,
-        question: "What does 'hot' mean?",
-        answers: [
-          { answer: "Soğuk", trueAnswer: false },
-          { answer: "Sıcak", trueAnswer: true },
-          { answer: "Nemli", trueAnswer: false },
-          { answer: "Kuru", trueAnswer: false },
-        ],
+        "id": 3,
+        "question": "What are the advantages of using an MTA file for deployment? Choose the 2 correct answers.",
+        "answers": [
+          { "answer": "It supports red - green deployment.", "trueAnswer": false },
+          { "answer": "It supports blue-green deployment.", "trueAnswer": true },
+          { "answer": "It provides workflows.", "trueAnswer": false },
+          { "answer": "It provides a build tool.", "trueAnswer": true }
+        ]
       },
       {
-        id: 4,
-        question: "What does 'red' mean?",
-        answers: [
-          { answer: "Kırmızı", trueAnswer: true },
-          { answer: "Yeşil", trueAnswer: false },
-          { answer: "Mavi", trueAnswer: false },
-          { answer: "Sarı", trueAnswer: false },
-        ],
+        "id": 4,
+        "question": "What is a \"main line\" in a source control management system used for? Choose the correct answer.",
+        "answers": [
+          { "answer": "To automate deployment", "trueAnswer": false },
+          { "answer": "To make developers' contributions transparent and avoid clashes", "trueAnswer": true },
+          { "answer": "To enable a reporting line for the project manager", "trueAnswer": false }
+        ]
       },
       {
-        id: 5,
-        question: "What does 'cold' mean?",
-        answers: [
-          { answer: "Sıcak", trueAnswer: false },
-          { answer: "Nemli", trueAnswer: false },
-          { answer: "Kuru", trueAnswer: false },
-          { answer: "Soğuk", trueAnswer: true },
-        ],
+        "id": 5,
+        "question": "What tooling is pre-installed in SAP Business Application Studio to speed up SAP Fiori UI development?",
+        "answers": [
+          { "answer": "Bootstrap Toolkit", "trueAnswer": false },
+          { "answer": "SAP Fiori Tools", "trueAnswer": true },
+          { "answer": "Vue.js Extensions", "trueAnswer": false }
+        ]
       },
       {
-        id: 6,
-        question: "What does 'small' mean?",
-        answers: [
-          { answer: "Büyük", trueAnswer: false },
-          { answer: "Küçük", trueAnswer: true },
-          { answer: "Yüksek", trueAnswer: false },
-          { answer: "Ağır", trueAnswer: false },
-        ],
+        "id": 6,
+        "question": "After you run the command cds add hana, which file is updated with the required configuration?",
+        "answers": [
+          { "answer": "package.json", "trueAnswer": true },
+          { "answer": "package.js", "trueAnswer": false },
+          { "answer": "package.mta", "trueAnswer": false },
+          { "answer": "package.cds", "trueAnswer": false }
+        ]
       },
       {
-        id: 7,
-        question: "What does 'fast' mean?",
-        answers: [
-          { answer: "Yavaş", trueAnswer: false },
-          { answer: "Hızlı", trueAnswer: true },
-          { answer: "Uzun", trueAnswer: false },
-          { answer: "Kısa", trueAnswer: false },
-        ],
+        "id": 7,
+        "question": "The credentials created in the SAP Continuous Integration and Delivery service enable you to do which of the following? Note: There are 2 correct answers.",
+        "answers": [
+          { "answer": "Connect to S/4 HANA Cloud", "trueAnswer": false },
+          { "answer": "Deploy applications to the SAP BTP, Cloud Foundry environment.", "trueAnswer": true },
+          { "answer": "Connect to a private GitHub repository.", "trueAnswer": true },
+          { "answer": "Access the service itself.", "trueAnswer": false }
+        ]
       },
       {
-        id: 8,
-        question: "What does 'big' mean?",
-        answers: [
-          { answer: "Küçük", trueAnswer: false },
-          { answer: "Düşük", trueAnswer: false },
-          { answer: "Büyük", trueAnswer: true },
-          { answer: "Yüksek", trueAnswer: false },
-        ],
+        "id": 8,
+        "question": "Which is the IDE of choice when using CAP on SAP Business technology Platform?",
+        "answers": [
+          { "answer": "SAP Business Application Studio", "trueAnswer": true },
+          { "answer": "SAP WebIDE", "trueAnswer": false },
+          { "answer": "Visual Studio", "trueAnswer": false },
+          { "answer": "Jupyter Notebook", "trueAnswer": false }
+        ]
       },
       {
-        id: 9,
-        question: "What does 'long' mean?",
-        answers: [
-          { answer: "Kısa", trueAnswer: false },
-          { answer: "Hızlı", trueAnswer: false },
-          { answer: "Yavaş", trueAnswer: false },
-          { answer: "Uzun", trueAnswer: true },
-        ],
+        "id": 9,
+        "question": "What do you need to connect a service to the Sandbox environment of the SAP API Business Hub for the Business Partner API that you want to use?",
+        "answers": [
+          { "answer": "An API key", "trueAnswer": true },
+          { "answer": "A personal token", "trueAnswer": false },
+          { "answer": "A password", "trueAnswer": false },
+          { "answer": "An authenticator", "trueAnswer": false }
+        ]
       },
       {
-        id: 10,
-        question: "What does 'old' mean?",
-        answers: [
-          { answer: "Genç", trueAnswer: false },
-          { answer: "Güzel", trueAnswer: false },
-          { answer: "Yaşlı", trueAnswer: true },
-          { answer: "Çirkin", trueAnswer: false },
-        ],
+        "id": 10,
+        "question": "Which statement is true about CAP's interaction with user interfaces?",
+        "answers": [
+          { "answer": "CAP services can only be consumed by other backend services.", "trueAnswer": false },
+          { "answer": "CAP services can be consumed by any UI framework through standard AJAX requests.", "trueAnswer": true },
+          { "answer": "CAP services are limited to SAP Fiori UIs.", "trueAnswer": false }
+        ]
       },
       {
-        id: 11,
-        question: "What does 'new' mean?",
-        answers: [
-          { answer: "Yeni", trueAnswer: true },
-          { answer: "Eski", trueAnswer: false },
-          { answer: "Kirli", trueAnswer: false },
-          { answer: "Temiz", trueAnswer: false },
-        ],
+        "id": 11,
+        "question": "How can you implement the continuous integration and continuous deployment of your CAP application? Note: There are 2 correct answers.",
+        "answers": [
+          { "answer": "Using the Project \"Piper\".", "trueAnswer": true },
+          { "answer": "Pushing the code to a centralized and remote source code management system.", "trueAnswer": false },
+          { "answer": "Deploying the application to SAP BTP.", "trueAnswer": false },
+          { "answer": "Integrating the SAP CI/CD service.", "trueAnswer": true }
+        ]
       },
       {
-        id: 12,
-        question: "What does 'fast food' mean?",
-        answers: [
-          { answer: "Sağlıklı yemek", trueAnswer: false },
-          { answer: "Lezzetli yemek", trueAnswer: false },
-          { answer: "Pahalı yemek", trueAnswer: false },
-          { answer: "Hızlı yemek", trueAnswer: true },
-        ],
+        "id": 12,
+        "question": "What are the main features and capabilities of the app router? Note: There are 3 correct answers to this question.",
+        "answers": [
+          { "answer": "It manages the authentication flows for the application.", "trueAnswer": true },
+          { "answer": "It downloads all necessary libraries.", "trueAnswer": false },
+          { "answer": "It can serve static content such as web pages, SAPUI5 or other client side code.", "trueAnswer": true },
+          { "answer": "It acts as an authorization server.", "trueAnswer": false },
+          { "answer": "It is the central entry point of the application.", "trueAnswer": true }
+        ]
       },
       {
-        id: 13,
-        question: "What does 'quiet' mean?",
-        answers: [
-          { answer: "Gürültülü", trueAnswer: false },
-          { answer: "Sessiz", trueAnswer: true },
-          { answer: "Canlı", trueAnswer: false },
-          { answer: "Sakin", trueAnswer: false },
-        ],
+        "id": 13,
+        "question": "You extended an SAP Business Standard API with custom fields. Where do you find the fields in the exposed OData API?",
+        "answers": [
+          { "answer": "In a new API", "trueAnswer": false },
+          { "answer": "In a new SAP Business Standard API", "trueAnswer": false },
+          { "answer": "In the extended SAP Business Standard API", "trueAnswer": true }
+        ]
       },
       {
-        id: 14,
-        question: "What does 'fat' mean?",
-        answers: [
-          { answer: "Zayıf", trueAnswer: false },
-          { answer: "Şişman", trueAnswer: true },
-          { answer: "Uzun", trueAnswer: false },
-          { answer: "Kısa", trueAnswer: false },
-        ],
+        "id": 14,
+        "question": "Which statements are true about CAP's deployment options? Choose the 2 correct answers.",
+        "answers": [
+          { "answer": "CAP has built-in support for multitenancy.", "trueAnswer": true },
+          { "answer": "CAP applications can only be deployed on SAP BTP environments.", "trueAnswer": false },
+          { "answer": "CAP applications can be deployed to SAP BTP Cloud Foundry and KYMA environments.", "trueAnswer": true },
+          { "answer": "CAP can only be used for single tenant applications.", "trueAnswer": false }
+        ]
       },
       {
-        id: 15,
-        question: "What does 'expensive' mean?",
-        answers: [
-          { answer: "Ucuz", trueAnswer: false },
-          { answer: "Güzel", trueAnswer: false },
-          { answer: "Pahalı", trueAnswer: true },
-          { answer: "Kötü", trueAnswer: false },
-        ],
+        "id": 15,
+        "question": "In SAP Build Process Automation, what is a decision table rule?",
+        "answers": [
+          { "answer": "A tabular set of business process decisions", "trueAnswer": false },
+          { "answer": "A tabular set of input/output rule expressions", "trueAnswer": true },
+          { "answer": "A set of rule expressions in an IF-THEN format", "trueAnswer": false },
+          { "answer": "A set of pre-defined data objects", "trueAnswer": false }
+        ]
       },
       {
-        id: 16,
-        question: "What does 'cheap' mean?",
-        answers: [
-          { answer: "Ucuz", trueAnswer: true },
-          { answer: "Pahalı", trueAnswer: false },
-          { answer: "Kötü", trueAnswer: false },
-          { answer: "Güzel", trueAnswer: false },
-        ],
+        "id": 16,
+        "question": "Which of the following is a feature of SAP Fiori Tools designed to visually assist in SAP Fiori UI development?",
+        "answers": [
+          { "answer": "AJAX Mapper", "trueAnswer": false },
+          { "answer": "List Page Designer", "trueAnswer": false },
+          { "answer": "Page Map", "trueAnswer": true }
+        ]
       },
       {
-        id: 17,
-        question: "What does 'worried' mean?",
-        answers: [
-          { answer: "Üzgün", trueAnswer: false },
-          { answer: "Mutlu", trueAnswer: false },
-          { answer: "Sıkıntılı", trueAnswer: false },
-          { answer: "Endişeli", trueAnswer: true },
-        ],
+        "id": 17,
+        "question": "When using CAP in the SAP Business Application Studio, you want to use Core Data Services to define the persistence layer. Which extension do you use for the design-time file?",
+        "answers": [
+          { "answer": ".hdbtable", "trueAnswer": false },
+          { "answer": ".cds", "trueAnswer": true },
+          { "answer": ".hdbcds", "trueAnswer": false },
+          { "answer": ".hdbddl", "trueAnswer": false }
+        ]
       },
       {
-        id: 18,
-        question: "What does 'sad' mean?",
-        answers: [
-          { answer: "Mutlu", trueAnswer: false },
-          { answer: "Güzel", trueAnswer: false },
-          { answer: "Kötü", trueAnswer: false },
-          { answer: "Üzgün", trueAnswer: true },
-        ],
+        "id": 18,
+        "question": "What are some of the characteristics of an extension application?",
+        "answers": [
+          { "answer": "Its UI layer is directly coupled with the back-end layer", "trueAnswer": false },
+          { "answer": "It consists of several layers", "trueAnswer": true },
+          { "answer": "Its UI layer is decoupled from the back-end layer", "trueAnswer": true },
+          { "answer": "It requires its own authorization management", "trueAnswer": false }
+        ]
       },
       {
-        id: 19,
-        question: "What does 'watch' mean?",
-        answers: [
-          { answer: "Bakmak", trueAnswer: false },
-          { answer: "Korkmak", trueAnswer: false },
-          { answer: "İzlemek", trueAnswer: true },
-          { answer: "Uyumak", trueAnswer: false },
-        ],
+        "id": 19,
+        "question": "Which of the following is one of the main side-by-side extensibility scenario?",
+        "answers": [
+          { "answer": "Extend user interfaces", "trueAnswer": true },
+          { "answer": "Extend OData interfaces", "trueAnswer": false },
+          { "answer": "Extend database", "trueAnswer": false }
+        ]
       },
       {
-        id: 20,
-        question: "What does 'sleep' mean?",
-        answers: [
-          { answer: "Kaçmak", trueAnswer: false },
-          { answer: "Uyumak", trueAnswer: true },
-          { answer: "Koşmak", trueAnswer: false },
-          { answer: "Oturmak", trueAnswer: false },
-        ],
+        "id": 20,
+        "question": "What is the maximum amount of RAM a single application instance on SAP BTP, Cloud Foundry can use?",
+        "answers": [
+          { "answer": "2 GB", "trueAnswer": false },
+          { "answer": "16 GB", "trueAnswer": false },
+          { "answer": "8 GB", "trueAnswer": true },
+          { "answer": "4 GB", "trueAnswer": false }
+        ]
       },
+      {
+        "id": 21,
+        "question": "Which criticality value is assigned to Negative criticality?",
+        "answers": [
+          { "answer": "3", "trueAnswer": false },
+          { "answer": "4", "trueAnswer": false },
+          { "answer": "1", "trueAnswer": true },
+          { "answer": "2", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 22,
+        "question": "In which environment can you deploy a cloud native micro app?",
+        "answers": [
+          { "answer": "SAP HANA Enterprise Cloud", "trueAnswer": false },
+          { "answer": "ABAP stack", "trueAnswer": false },
+          { "answer": "SAP BTP, Cloud Foundry environment", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 23,
+        "question": "What are some of the Continuous Integration principles? Choose the 3 correct answers.",
+        "answers": [
+          { "answer": "Fix errors only when users complain.", "trueAnswer": false },
+          { "answer": "Fix errors immediately.", "trueAnswer": true },
+          { "answer": "Run tests only in production.", "trueAnswer": false },
+          { "answer": "Use version control.", "trueAnswer": true },
+          { "answer": "Run tests in the build.", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 24,
+        "question": "Which of the following are part of the local tests in the SAP Cloud SDK pipeline? Choose 3 correct answers.",
+        "answers": [
+          { "answer": "Performance tests", "trueAnswer": false },
+          { "answer": "Front-end unit tests", "trueAnswer": true },
+          { "answer": "Regression tests", "trueAnswer": false },
+          { "answer": "Static code checks", "trueAnswer": true },
+          { "answer": "Background integration tests", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 25,
+        "question": "What is the default IDE for SAP's multi-cloud environment?",
+        "answers": [
+          { "answer": "SAP Business Application Studio", "trueAnswer": true },
+          { "answer": "Oxygen", "trueAnswer": false },
+          { "answer": "Eclipse", "trueAnswer": false },
+          { "answer": "Microsoft Visual Code", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 26,
+        "question": "Which of the following tools are required to build Spring Boot applications using the SAP Cloud SDK? Note: There are 2 correct answers to this question.",
+        "answers": [
+          { "answer": "Spring Initializ", "trueAnswer": false },
+          { "answer": "SAP Mobile Services (MDK)", "trueAnswer": false },
+          { "answer": "Java SE Development Kit 8", "trueAnswer": true },
+          { "answer": "Apache Maven version 3.5 or above", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 27,
+        "question": "Which of the following statements about a GitHub Repository are correct? Choose the 3 correct answers.",
+        "answers": [
+          { "answer": "Anyone on the internet can see a private repository.", "trueAnswer": false },
+          { "answer": "You choose who can commit into your private repository.", "trueAnswer": true },
+          { "answer": "Anyone on the internet can see a public repository.", "trueAnswer": true },
+          { "answer": "You choose who can see your private repository.", "trueAnswer": true },
+          { "answer": "Anyone on the internet can commit into a public repository.", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 28,
+        "question": "Which models can you use to develop a micro app? (2 corrects)",
+        "answers": [
+          { "answer": "SAP ABAP RESTful programming model", "trueAnswer": false },
+          { "answer": "SAP Cloud Application Programming Model (CAP)", "trueAnswer": true },
+          { "answer": "SAP HANA extended application services, classic model", "trueAnswer": false },
+          { "answer": "SAP HANA extended application services, advanced model", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 29,
+        "question": "How many event handlers can you register for one event phase?",
+        "answers": [
+          { "answer": "Exactly four", "trueAnswer": false },
+          { "answer": "Multiple", "trueAnswer": true },
+          { "answer": "Exactly one", "trueAnswer": false },
+          { "answer": "Exactly three", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 30,
+        "question": "What is OData?",
+        "answers": [
+          { "answer": "A standard to share data under a creative commons license", "trueAnswer": false },
+          { "answer": "A standard to access data through RESTful APIs", "trueAnswer": true },
+          { "answer": "A standard to create user interfaces (UI) for applications", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 31,
+        "question": "When you develop a CAP application, what can be used in order to connect to an external Cloud system? Note: There are 3 correct answers.",
+        "answers": [
+          { "answer": "Subaccount Destinations", "trueAnswer": true },
+          { "answer": "Global Account Destinations", "trueAnswer": false },
+          { "answer": "Node.js configured destinations", "trueAnswer": true },
+          { "answer": "SAP BTP destinations using Destination Service", "trueAnswer": true },
+          { "answer": "Cloud Connector", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 32,
+        "question": "A CRUD operation violated the foreign key constraints. Why should you register an error handler in your service implementation for the exception of the CAP SDK for Node.js?",
+        "answers": [
+          { "answer": "To avoid a break in the app execution", "trueAnswer": false },
+          { "answer": "To force the execution of the CRUD operation", "trueAnswer": false },
+          { "answer": "To ensure that the end user receives a message", "trueAnswer": false },
+          { "answer": "To provide a meaningful error message", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 33,
+        "question": "What is the recommended approach for adding custom business logic to an SAP S/4HANA Cloud system?",
+        "answers": [
+          { "answer": "Adding custom code to the ABAP application server", "trueAnswer": false },
+          { "answer": "Modifying core SAP code", "trueAnswer": false },
+          { "answer": "Directly running custom logic on the application server", "trueAnswer": false },
+          { "answer": "Using side-by-side extensibility with SAP BTP", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 34,
+        "question": "Which of the following applies to Custom Event handlers? Note: There are 3 correct answers.",
+        "answers": [
+          { "answer": "Single handlers can be registered for multiple events.", "trueAnswer": true },
+          { "answer": "Multiple Event Handlers can be registered for same event.", "trueAnswer": true },
+          { "answer": "Multiple Event Handlers can not be registered for same event.", "trueAnswer": false },
+          { "answer": "CRUD requests are not served by Generic handlers.", "trueAnswer": false },
+          { "answer": "Registered custom handlers can add Domain logic to application.", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 35,
+        "question": "What is the programming model used in non-ABAP based extensions on SAP BTP?",
+        "answers": [
+          { "answer": "SAP Cloud Application Programming Model", "trueAnswer": true },
+          { "answer": "ABAP RESTful Programming Model", "trueAnswer": false },
+          { "answer": "SAP Fiori Programming Model", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 36,
+        "question": "Which are the Service APIs for Custom Logic? Note: There are 3 correct answers.",
+        "answers": [
+          { "answer": "Querying API", "trueAnswer": true },
+          { "answer": "External Services", "trueAnswer": false },
+          { "answer": "Custom API", "trueAnswer": false },
+          { "answer": "Event Handling", "trueAnswer": true },
+          { "answer": "Messaging API", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 37,
+        "question": "Which of the following is a constraint of REST?",
+        "answers": [
+          { "answer": "IDocs with links", "trueAnswer": false },
+          { "answer": "Hypermedia as the Engine of Application State (HATEOAS) including links", "trueAnswer": true },
+          { "answer": "SOAP with media links", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 38,
+        "question": "What is a Multi-Target-Application (MTA) comprised of?",
+        "answers": [
+          { "answer": "modules and services", "trueAnswer": false },
+          { "answer": "modules and instances", "trueAnswer": false },
+          { "answer": "modules and resources", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 39,
+        "question": "You are tasked with developing a simple end-to-end application with data persistency in SAP HANA Cloud and with SAP Fiori as the user frontend, to perform CRUD operations. According to the programming model's golden path, which activities are mandatory when building such applications? Note: There are 3 correct answers to this question.",
+        "answers": [
+          { "answer": "Add custom logic.", "trueAnswer": false },
+          { "answer": "Add the SAP Fiori UI.", "trueAnswer": true },
+          { "answer": "Define the data model.", "trueAnswer": true },
+          { "answer": "Reuse existing services.", "trueAnswer": false },
+          { "answer": "Define services.", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 40,
+        "question": "Which of the following features are provided by SAP BAS?",
+        "answers": [
+          { "answer": "OData modelling", "trueAnswer": false },
+          { "answer": "SAPUI5 templates", "trueAnswer": true },
+          { "answer": "Git integration", "trueAnswer": true },
+          { "answer": "Destination administration", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 41,
+        "question": "Which method can you use to collect error messages with high severity and return them to the caller in the request-response?",
+        "answers": [
+          { "answer": "req.reply", "trueAnswer": false },
+          { "answer": "req.notify", "trueAnswer": false },
+          { "answer": "req.error", "trueAnswer": true },
+          { "answer": "req.reject", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 42,
+        "question": "Which of the following supports non-hierarchical data? Choose the correct answer.",
+        "answers": [
+          { "answer": "YAML", "trueAnswer": true },
+          { "answer": "JSON", "trueAnswer": false },
+          { "answer": "Neither YAML nor JSON", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 43,
+        "question": "Which files do you modify to store project configurations? Note: There are 2 correct answers.",
+        "answers": [
+          { "answer": "passport.js", "trueAnswer": false },
+          { "answer": "package.json", "trueAnswer": true },
+          { "answer": ".cdsrc.json", "trueAnswer": true },
+          { "answer": "manifest.json", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 44,
+        "question": "Which of the following are principles of cloud computing? Note: There are 2 correct answers.",
+        "answers": [
+          { "answer": "Microservices", "trueAnswer": true },
+          { "answer": "Automation", "trueAnswer": false },
+          { "answer": "Integration", "trueAnswer": false },
+          { "answer": "Serverless", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 45,
+        "question": "How do you add authorization and trust management to your CAP project?",
+        "answers": [
+          { "answer": "cds add xsuaa", "trueAnswer": true },
+          { "answer": "cds add uaa", "trueAnswer": false },
+          { "answer": "cds add security", "trueAnswer": false }
+        ]
+      },
+      {
+        "id": 46,
+        "question": "Which are the Service APIs for Custom Logic? Note: There are 3 correct answers.",
+        "answers": [
+          { "answer": "Querying API", "trueAnswer": true },
+          { "answer": "External Services", "trueAnswer": false },
+          { "answer": "Custom API", "trueAnswer": false },
+          { "answer": "Event Handling", "trueAnswer": true },
+          { "answer": "Messaging API", "trueAnswer": true }
+        ]
+      },
+      {
+        "id": 47,
+        "question": "What is the actual automation part of SAP Continuous Integration and Delivery? Choose the correct answer.",
+        "answers": [
+          { "answer": "Configure a branch in the GitHub repository.", "trueAnswer": false },
+          { "answer": "Configure a job.", "trueAnswer": true }
+        ]
+      }
     ],
     A2: [
       {

@@ -10,55 +10,63 @@ function Quiz() {
 
   const [isNextButton, setIsNextButton] = useState(false);
   const [isResultButton, setIsResultButton] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState();
+  const [selectedIndexes, setSelectedIndexes] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [time, setTime] = useState(30);
   const [isErrorMessage, setIsErrorMessage] = useState(false);
   const [isResult, setIsResult] = useState(false);
 
-  const selectAnswer = (index) => {
-    if (currentQuestion === questions[level].length - 1) {
-      setIsNextButton(false);
-      setIsResultButton(true);
-    } else {
-      setIsNextButton(true);
-    }
-    setSelectedIndex(index);
+  const toggleAnswer = (index) => {
+    setSelectedIndexes((prev) => {
+      if (prev.includes(index)) {
+        return prev.filter((i) => i !== index);
+      } else {
+        return [...prev, index];
+      }
+    });
   };
 
-  const nextQuestion = (index) => {
+  useEffect(() => {
+    if (selectedIndexes.length > 0) {
+      if (currentQuestion === questions[level].length - 1) {
+        setIsNextButton(false);
+        setIsResultButton(true);
+      } else {
+        setIsNextButton(true);
+      }
+    } else {
+      setIsNextButton(false);
+      setIsResultButton(false);
+    }
+  }, [selectedIndexes, currentQuestion, questions, level]);
+
+  const nextQuestion = () => {
     if (currentQuestion >= questions[level].length - 1) {
-      addAnswer(index);
+      addAnswer();
       setCurrentQuestion(0);
       setIsResult(true);
     } else {
       setTime(30);
       setIsNextButton(false);
-      addAnswer(index);
+      addAnswer();
       setCurrentQuestion(currentQuestion + 1);
-      setSelectedIndex();
+      setSelectedIndexes([]);
     }
   };
 
-  const addAnswer = (index) => {
-    const selectedAnswer =
-      index !== null
-        ? questions[level][currentQuestion].answers[index]
-        : {
-            answer: "Süre Bitti",
-            trueAnswer: false,
-          };
-    const newAnswers = [...selectedAnswers, selectedAnswer];
+  const addAnswer = () => {
+    const selectedAnswersList = selectedIndexes.map((index) => questions[level][currentQuestion].answers[index]);
+    const newAnswers = [...selectedAnswers, selectedAnswersList];
     setSelectedAnswers(newAnswers);
   };
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTime(time - 1);
+      setTime((prevTime) => prevTime - 1);
     }, 1000);
     time <= 5 ? setIsErrorMessage(true) : setIsErrorMessage(false);
     if (time < 0) {
-      nextQuestion(null);
+      nextQuestion();
     }
     return () => clearInterval(timer);
   }, [time]);
@@ -124,17 +132,23 @@ function Quiz() {
         {questions[level][currentQuestion].answers.map((answer, index) => {
           return (
             <label
-              onClick={() => selectAnswer(index)}
+              onClick={() => toggleAnswer(index)}
               key={index}
               htmlFor={index}
               className={
-                selectedIndex === index
+                selectedIndexes.includes(index)
                   ? "answer-label selected"
                   : "answer-label"
               }
             >
               {answer.answer}
-              <input type="radio" name="answer" id={index} />
+              <input
+                type="checkbox"
+                name="answer"
+                id={index}
+                checked={selectedIndexes.includes(index)}
+                readOnly
+              />
             </label>
           );
         })}
@@ -143,7 +157,7 @@ function Quiz() {
       {isNextButton ? (
         <div className="next">
           <button
-            onClick={() => nextQuestion(selectedIndex)}
+            onClick={() => nextQuestion()}
             type="button"
             className="next-btn"
           >
@@ -158,7 +172,7 @@ function Quiz() {
       {isResultButton ? (
         <div className="next">
           <button
-            onClick={() => nextQuestion(selectedIndex)}
+            onClick={() => nextQuestion()}
             type="button"
             className="next-btn result-btn"
           >
